@@ -1,5 +1,5 @@
 const apiKey="539715a045fdfd9296af205aeb7ed1f8";
-const apiUrl= "https://api.openweathermap.org/data/2.5/weather?unites=metric&q=";
+const apiUrl= "https://api.openweathermap.org/data/2.5/weather?&q=";
 
 const searchbox = document.querySelector(".search input");
 const searchbtn = document.querySelector(".search button");
@@ -20,7 +20,7 @@ async function checkWeather(city){
     console.log(data);
 
     document.querySelector(".city").innerHTML=data.name;
-    document.querySelector(".temp").innerHTML=data.main.temp + "°C";
+    document.querySelector(".temp").innerHTML=data.main.temp + "°F";
     document.querySelector(".humidity").innerHTML=data.main.humidity + "%";
     document.querySelector(".wind").innerHTML=data.wind.speed + "km/hr";
     
